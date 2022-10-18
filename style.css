@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500,700);
+@import url(https://fonts.googleapis.com/css?family=Fraunces:700);
+:root {
+	--height-65vh: 65vh;
+	--white: 255, 255, 255;
+	--cream: 242, 235, 227;
+	--grey: 133, 133, 133;
+	--dark-cyan: 60, 128, 103;
+	--active-button: 26, 64, 49;
+	--very-dark-blue: 28, 35, 43;
+	--dark-grayish-blue: 108, 114, 137;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(var(--cream));
+}
+.flex-container {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.flex-item {
+	width: calc(var(--height-65vh)*2/3);
+	height: var(--height-65vh);
+}
+.flex-item-left { border-radius: 10px 0 0 10px; }
+.flex-item-right {
+	padding: 1.5rem;
+	border-radius: 0 10px 10px 0;
+	background-color: rgb(var(--white));
+}
+.left-img {
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+	content: url('images/image-product-desktop.jpg');
+}
+.grey { color: rgb(var(--grey)); }
+.tag-text {
+	font-size: 10px;
+	letter-spacing: 7px;
+	text-transform: uppercase;
+}
+h1 {
+	font-size: 2rem;
+	line-height: 2rem;
+}
+p {
+	font-size: 14px;
+	line-height: 22px;
+}
+.price {
+	display: flex;
+	margin: 1.5rem 0;
+	align-items: center;
+}
+.main-price {
+	font-size: 30px;
+	margin: 0 1rem 0 0;
+	color: rgb(var(--dark-cyan));
+}
+.strike-price {
+	font-size: 13px;
+	text-decoration: line-through;
+}
+button {
+	padding: 0;
+	width: 100%;
+	height: 50px;
+	border: none;
+	display: flex;
+	font-weight: bold;
+	align-items: center;
+	border-radius: 10px;
+	justify-content: center;
+	color: rgb(var(--white));
+	background-color: rgb(var(--dark-cyan));
+}
+button>img {
+	width: 15px;
+	height: 15px;
+	margin-right: 0.5rem;
+}
+button:hover {
+	cursor: pointer;
+	background-color: rgb(var(--active-button));
+}
+.fraunces { font-family: Fraunces; }
+.montserrat { font-family: Montserrat; }
+@media only screen and (max-width: 600px) {
+	.flex-container { flex-direction: column; }
+	.flex-item {
+		height: auto;
+		max-width: 350px;
+		width: calc(100vw - 1.75rem);
+	}
+	.flex-item-left { border-radius: 10px 10px 0 0; }
+	.flex-item-right { border-radius: 0 0 10px 10px; }
+	.left-img { content: url('images/image-product-mobile.jpg'); }
+	h1 { margin: 1rem 0; }
+	.price { margin: 1rem 0; }
+}
