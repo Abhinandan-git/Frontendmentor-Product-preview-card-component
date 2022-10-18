@@ -1,32 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset='UTF-8'>
+	<link rel='stylesheet' href='style.css'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<title>Frontend Mentor | Product preview card component</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel='icon' type='image/png' sizes='32x32' href='./images/favicon-32x32.png'>
 </head>
 <body>
-	<div class="flex-container">
-		<div class="flex-item flex-item-left">
-			<div class="left-img"></div>
-			<!-- <img alt="image product" class="left-img"> -->
+	<!-- main component -->
+	<main class='flex-container'>
+		<!-- left section -->
+		<div class='flex-item flex-item-left'>
+			<!-- product image -->
+			<div class='product-image'></div>
 		</div>
-		<div class="flex-item flex-item-right">
-			<div class="grey tag-text montserrat">perfume</div>
-			<h1 class="fraunces">Gabrielle Essence Eau De Parfum</h1>
-			<p class="grey montserrat">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
-			<div class="price">
-				<div class="main-price fraunces">$149.99</div>
-				<div class="grey strike-price montserrat">$169.99</div>
+		<!-- right section -->
+		<div class='flex-item flex-item-right'>
+			<!-- main content -->
+			<div class='product-type grey-text montserrat'>perfume</div>
+			<h1 class='main-heading fraunces'>Gabrielle Essence Eau De Parfum</h1>
+			<p class='product-description grey-text montserrat'>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+			<div class='price-container'>
+				<span class='main-price fraunces'>$149.99</span>
+				<span class='old-price grey-text montserrat'>$169.99</span>
 			</div>
-			<button class="montserrat">
-				<img src="images/icon-cart.svg" alt="add to cart svg">
-				Add to Cart
+			<!-- add to cart button -->
+			<button class='add-to-cart montserrat'>
+				<img src='images/icon-cart.svg' class="svg" alt='Add to Cart'>
+				<a href="#">Add to Cart</a>
 			</button>
 		</div>
-	</div>
+	</main>
 </body>
 </html>
